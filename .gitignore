@@ -1,0 +1,5 @@
+# node模块文件夹
+node_modules/
+
+# dist编译文件夹
+dist/

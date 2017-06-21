@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+@import 'common';
+
+.flex{ display: flex;}
+.main{ background: $color_gray; text-align: center;
+	.btn1{ @extend .btn_block; margin: 6px auto; width:100px; animation:btn1 2s;}
+	.btn2{ @extend .btn_link; font-size: 24px;  }
+}
+
+
+@keyframes btn1{
+	0%{ transform:translate(0,0);}
+	50%{ transform:translate(-120px,0);}
+}

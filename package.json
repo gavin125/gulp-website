@@ -1,0 +1,25 @@
+{
+  "name": "gulptest",
+  "version": "1.0.0",
+  "description": "这是使用gulp构建架构的网站",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-changed": "^3.1.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-webserver": "^0.9.1"
+  },
+  "scripts": {
+    "bulid": "gulp bulid"
+  },
+  "author": "gavin",
+  "license": "ISC"
+}
