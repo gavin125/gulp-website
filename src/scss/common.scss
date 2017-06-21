@@ -26,7 +26,7 @@ article, aside, dialog, figure, footer, header, hgroup, nav, section {
 /* 设置默认字体 */
 body,
 button, input, select, textarea /* for ie */ {
-    font:12px/1.5 arial, "Microsoft Yahei", sans-serif;
+    font:14px/1.5 arial, "Microsoft Yahei", sans-serif;
 }
 h1, h2, h3, h4, h5, h6 { font-size:100%; }
 address, cite, dfn, em, var { font-style:normal; } /* 将斜体扶正 */
@@ -39,7 +39,7 @@ small { font-size:12px; } /* 小于 12px 的中文很难阅读，让 small 正�
 ul, ol, li { list-style:none; }
 
 /* 重置文本格式元素 */
-a { text-decoration:none;outline:thin none; }
+a { text-decoration:none;outline:thin none;  }
 
 
 /* 重置表单元素 */
@@ -56,22 +56,31 @@ table { border-collapse:collapse; border-spacing:0; }
 
 /**************END CSS Reset *****************START common_ui********************************/
 
-//字体规范
-$text_size_big:30px;
-$text_size_title:18px;
-$text_size_default:14px;
-$text_size_small:12px;
+@import 'baseui';
 
-//颜色
-$color_red:#f00;
-$color_orange:#fc0;
-$color_blue:#09f;
-$color_white:#fff;
-$color_black:#666;
-$color_gray:#aaa;
+/*************************** Head & Foot ************************************/
+.inside{ width:960px; margin: 0 auto;}
 
+.header{ height:40px; padding:18px 0; background: $c-white;
+	.logo{ width: 133px; height: 40px; background: url('../img/common/logo.png'); float:left; text-indent: -999em;}
+	.nav{ height: 40px; line-height: 40px; float: right;}
+	.nav li{ float: left; margin-left: 50px; position: relative;}
+	.nav a{ display: inline-block; width:66px; text-align: center; font-size: $fs-nav; color:$c-black; }
+	.nav a.hover,.nav a:hover{ color:$c-orange;}
+	//子菜单
+	.subnav{ position: absolute; display: inline-block; top:40px; left: -20px; background: $c-white; height:85px; border: solid 1px $bc-lightgray; width:240px; padding:15px 20px; display: none; }
+	.nav a:hover+.subnav{ display: block;}
+	.subnav img{ display: block; float: right; padding-left: 20px; border-left: solid 1px $bc-lightgray;  }
+	.subnav a{ display: block; float: left; line-height: 23px; font-size: $fs-default; margin-bottom: 5px; }
+	.subnav a.hover,.subnav a:hover{ background: $c-orange; color: $c-white; border-radius: 5px; }
+	//子菜单的小三角
+	.shape{ position: absolute; top:-6px; left: 45px; display: block; }
+	.shape .line{ display: block; height: 1px; background: $c-white; border-left: solid 1px $bc-lightgray; border-right: solid 1px $bc-lightgray; width:0; margin:0 5px;}
+	.shape .l2{ margin:0 4px; width: 2px;  }
+	.shape .l3{ margin:0 3px; width: 4px;  }
+	.shape .l4{ margin:0 2px; width: 6px;  }
+	.shape .l5{ margin:0 1px; width: 8px;  }
+	.shape .l6{ margin:0 0; width: 10px;  }
+}
 
-//按钮
-.btn_block{ display: block; padding:5px 20px; font-size: $text_size_title; background: $color_orange;}
-.btn_link{ color: $color_blue; text-decoration: underline;}
-
+.footer{ background: $c-drakblack; color: $c-lightblack; padding:30px 0; text-align: center;}

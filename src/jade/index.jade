@@ -2,16 +2,86 @@ doctype
 html
 	head
 		meta(charset="utf-8")
-		title test页
-		link(href="../css/reset.css",rel="stylesheet")
-		link(href="../css/index.css",rel="stylesheet")
+		title 云信创富-首页
+		link(href="css/common.css",rel="stylesheet")
+		link(href="css/index.css",rel="stylesheet")
 	
 	body
-		div.main
-			p 这是一个测试页面
-			a.btn1(href="#") 百度 
-			a.btn2(href="#") 百度 
-		div.good
+		div.header
+			div.inside
+				h1.logo 云信创富
+				ul.nav
+					li
+						a(href="#") 首页
+					li
+						a.hover(href="javascript:;")企业聚焦
+						p.subnav
+							span.shape
+								i.line
+								i.line.l2
+								i.line.l3
+								i.line.l4
+								i.line.l5
+								i.line.l6
+							img(src="img/common/subnav01.png")
+							a.hover(href="news.html" traget="_blank") 行业动态
+							a(href="#") 企业动态
+							a(href="#") 媒体报道
+					li
+						a(href="#") 小微普惠
+					li
+						a(href="#") 金融科技
+					li
+						a(href="#") 关于我们
 
-		script(src="../js/jquery-1.7.2.min.js")
-		script(src="../js/index.js")
+		div.banner
+
+		ul.advantage.inside
+			li.item.icon1
+				h4.title 管理资产逾100亿
+				p 成立两年半，业务覆盖22大城市
+			li.item.icon2
+				h4.title 创新金融科技
+				p 科技与金融结合，提升效率
+			li.item.icon3
+				h4.title 履约保证保险
+				p 资金资产双保险
+
+		div.content.inside
+			div.news
+				h3.title 行业动态
+					a.more(href="#") 更多 &gt;&gt;
+				p.first
+					a(href="#")
+						img(src="img/img01.png")
+					a(href="#") 目前，校园贷“正规军”渐成规模，区别于此前部分“校园贷”违规开展变相高利贷，银行系校园贷产品都打出了“低息”牌。不过，低利率…
+					span 2017-6-15
+						a.more(href="#") 查看全文 &gt;&gt;
+				p.list 
+					a(href="#") 银行用低利率杀入校园贷 不良率上3%就得亏钱
+						span.time 2017-6-15
+				p.list 
+					a(href="#") 银行用低利率杀入校园贷 不良率上3%就得亏钱
+						span.time 2017-6-15
+	
+			div.news.right
+				h3.title 企业动态
+					a.more(href="#") 更多 &gt;&gt;
+				p.first
+					a(href="#")
+						img(src="img/img02.png")
+					a(href="#") 目前，校园贷“正规军”渐成规模，区别于此前部分“校园贷”违规开展变相高利贷，银行系校园贷产品都打出了“低息”牌。不过，低利率…
+					span 2017-6-15
+						a.more(href="#") 查看全文 &gt;&gt;
+				p.list 
+					a(href="#") 银行用低利率杀入校园贷 不良率上3%就得亏钱
+						span.time 2017-6-15
+				p.list 
+					a(href="#") 银行用低利率杀入校园贷 不良率上3%就得亏钱
+						span.time 2017-6-15
+				
+		div.footer
+			p @2014-2017 米缸金融 沪ICP备15002888号 北京云信创富资本管理有限公司
+
+		script(src="js/jquery-1.7.2.min.js")
+		script(src="js/index.js")

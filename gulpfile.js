@@ -60,9 +60,9 @@ gulp.task('js', function() {
 
 //IMG处理
 gulp.task('img', function(){
-  return gulp.src(srcPath.images+'/**/*.{png,jpg,gif,svg}') // 指明源文件路径、并进行文件匹配
+  return gulp.src(srcPath.images+'/**/*.{png,jpg,gif}') // 指明源文件路径、并进行文件匹配
     .pipe(changed( destPath.img ))
-    .pipe(imagemin())
+    //.pipe(imagemin())
     .pipe(gulp.dest( destPath.img )); // 输出路径
 });
 
@@ -98,7 +98,7 @@ gulp.task('start',['clean'],function(){
 
 // 清理文件
 gulp.task('clean', function() {
-  return gulp.src([ destPath.html , destPath.css , destPath.js , destPath.img ], {read: false})
+  return gulp.src( destPath.html , {read: false})
     .pipe(rimraf())
 });
 // 样式处理
@@ -108,9 +108,18 @@ gulp.task('bulidCss', function () {
     .pipe(gulp.dest( destPath.css )); // 输出路径
 });
 
+// 图片压缩
+gulp.task('bulidImg', function(){
+  return gulp.src(srcPath.images+'/**/*.{png,jpg,gif,svg}') // 指明源文件路径、并进行文件匹配
+    .pipe(changed( destPath.img ))
+    //.pipe(imagemin())
+    .pipe(gulp.dest( destPath.img )); // 输出路径
+});
+
+
 // 打包发布
 gulp.task('bulid', ['clean'], function(){ // 开始任务前会先执行[clean]任务
-  return gulp.start('html','bulidCss','js','img'); // 等[clean]任务执行完毕后再执行其他任务
+  return gulp.start('html','bulidCss','js','bulidImg'); // 等[clean]任务执行完毕后再执行其他任务
 });
 
 
