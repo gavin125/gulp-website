@@ -3,3 +3,6 @@ node_modules/
 
 # dist编译文件夹
 dist/
+
+# sass 缓存文件夹
+.sass-cache/
