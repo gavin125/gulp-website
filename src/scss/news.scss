@@ -3,5 +3,30 @@
 @import 'baseui';
 body{ background: $bgc-lightgray;}
 
-.content{ background: $c-white; margin: 15px auto;}
+.main{ background: $c-white; margin: 15px auto; position: relative;}
 
+.menu{ position: absolute; top:0; left: 0; width:180px; }
+.menu a{ display:block; border-bottom: solid 1px $bc-lightgray; border-right:solid 1px $bc-lightgray; border-left: solid 5px $bc-gray; line-height: 60px; text-align: center; cursor:pointer; }
+.menu .curr,.menu a:hover{ border-right:solid 1px $c-white; border-left: solid 5px $c-orange; color: $c-orange; }
+
+.content{ margin-left: 179px; border-left: solid 1px $bc-lightgray; padding:60px 20px 20px;}
+
+//新闻列表
+.newlist{
+	.item{ overflow: hidden; margin-bottom: 15px;}
+	img{ float: left; display: block; margin-right: 15px;}
+	.title{ font-weight: normal; color: $c-drakblack;}
+	.date,.newinfo{ color: $c-lightblack; font-size: $fs-small;}
+	.newinfo{ margin-top: 15px;}
+	.more{ float: right; font-size: $fs-small; margin-top: 10px; color: $c-black;}
+	.more:hover{ color: $c-orange;}
+}
+
+//分页
+.pagebox{ text-align: center; line-height: 32px; margin: 50px 0 30px;
+	a{display: inline-block; height:30px; border:solid 1px $bc-gray; color: $c-black; padding:0 10px; background: $bgc-lightgray; line-height: 30px; margin-left: -1px;}
+	.p_num{ width:30px; padding: 0;}
+	.curr,a:hover{ border-color: $c-orange; background: $c-orange; color:$c-white;}
+	span{ display: inline-block; margin: 0 5px; }
+	input{ border:solid 1px $bc-gray; width:40px; height: 30px; line-height: 30px; padding:0; text-align: center; display: inline-block; margin: -1px 5px 0 20px}
+}

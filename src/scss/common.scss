@@ -61,6 +61,7 @@ table { border-collapse:collapse; border-spacing:0; }
 /*************************** Head & Foot ************************************/
 .inside{ width:960px; margin: 0 auto;}
 
+//头部含导航
 .header{ height:40px; padding:18px 0; background: $c-white;
 	.logo{ width: 133px; height: 40px; background: url('../img/common/logo.png'); float:left; text-indent: -999em;}
 	.nav{ height: 40px; line-height: 40px; float: right;}
@@ -68,8 +69,8 @@ table { border-collapse:collapse; border-spacing:0; }
 	.nav a{ display: inline-block; width:66px; text-align: center; font-size: $fs-nav; color:$c-black; }
 	.nav a.hover,.nav a:hover{ color:$c-orange;}
 	//子菜单
-	.subnav{ position: absolute; display: inline-block; top:40px; left: -20px; background: $c-white; height:85px; border: solid 1px $bc-lightgray; width:240px; padding:15px 20px; display: none; }
-	.nav a:hover+.subnav{ display: block;}
+	.subnav{ position: absolute; display: inline-block; top:40px; left: -20px; background: $c-white; height:85px; border: solid 1px $bc-lightgray; width:240px; padding:15px 20px; display: none; z-index: 999; }
+	.nav li:hover .subnav{ display: block;}
 	.subnav img{ display: block; float: right; padding-left: 20px; border-left: solid 1px $bc-lightgray;  }
 	.subnav a{ display: block; float: left; line-height: 23px; font-size: $fs-default; margin-bottom: 5px; }
 	.subnav a.hover,.subnav a:hover{ background: $c-orange; color: $c-white; border-radius: 5px; }
@@ -83,4 +84,7 @@ table { border-collapse:collapse; border-spacing:0; }
 	.shape .l6{ margin:0 0; width: 10px;  }
 }
 
+//底部版权
 .footer{ background: $c-drakblack; color: $c-lightblack; padding:30px 0; text-align: center;}
+
+
