@@ -2,9 +2,12 @@
 var gulp = require('gulp'), //引用项目gulp
     jade = require('gulp-jade'), //jade
     sass = require('gulp-ruby-sass'), //编译sass
+    sourcemaps  = require('gulp-sourcemaps'), //生产sass源文件指向
     autoprefixer = require('gulp-autoprefixer'), //补全浏览器前缀
     uglify = require('gulp-uglify'),//压缩js
-    imagemin = require('gulp-imagemin'), //图片压缩
+    imagemin = require('gulp-imagemin'),//压缩图片
+    pngquant = require('imagemin-pngquant'),//压缩图片
+    tinypng  = require('gulp-tinypng-compress'), //TingPNG图片压缩api
     changed = require('gulp-changed'), // 只操作有过修改的文件
     rimraf = require('gulp-rimraf'), //清空文件夹
 
@@ -20,6 +23,7 @@ var srcPath = {
   images: 'src/images'
 };
 var destPath = {
+  root: 'dist',
   html: 'dist',
   css : 'dist/css',
   js  : 'dist/js',
@@ -42,10 +46,11 @@ gulp.task('html',function(){
 
 //CSS处理
 gulp.task('css', function () {
-    return sass(srcPath.scss+'/**/*.scss', { style: 'compact' , /*sourcemap: true*/ }) // 指明源文件路径、并进行文件匹配（编译风格：简洁格式）
-        .on('error', function (err) {console.error('Error!', err.message);}) // 显示错误信息
+    return sass(srcPath.scss+'/**/*.scss',{sourcemap: true, style: 'compact'}) // 指明源文件路径、并进行文件匹配
+        //style编译风格：nested嵌套,compact紧凑,expanded展开,compressed
         //.pipe(changed( destPath.css ))
-        //.pipe(sourcemaps.write('maps')) // 地图输出路径（存放位置）
+        .on('error', function (err) {console.error('Error!', err.message); })// 显示错误信息
+        .pipe(sourcemaps.write())
         .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))// 主流浏览器的最新两个版本,是否美化属性值
         .pipe(gulp.dest( destPath.css )); // 输出路径
 });
@@ -62,7 +67,6 @@ gulp.task('js', function() {
 gulp.task('img', function(){
   return gulp.src(srcPath.images+'/**/*.{png,jpg,gif}') // 指明源文件路径、并进行文件匹配
     .pipe(changed( destPath.img ))
-    //.pipe(imagemin())
     .pipe(gulp.dest( destPath.img )); // 输出路径
 });
 
@@ -86,9 +90,8 @@ gulp.task('watch',function(){
 
 //默认执行
 gulp.task('default',['webserver','watch']);
-gulp.task('start',['clean'],function(){
-  return gulp.start('html','css','js','img')
-})
+//初始化
+gulp.task('start', ['clean'], function(){ return gulp.start('html','css','js','img'); })
 
 
 
@@ -98,28 +101,43 @@ gulp.task('start',['clean'],function(){
 
 // 清理文件
 gulp.task('clean', function() {
-  return gulp.src( destPath.html , {read: false})
-    .pipe(rimraf())
+  return gulp.src( destPath.root , {read: false})
+    .pipe(rimraf())//清空生产环境生产的文件夹
 });
 // 样式处理
 gulp.task('bulidCss', function () {
   return sass( srcPath.scss+'/**/*.scss', { style: 'compressed' }) // 指明源文件路径、并进行文件匹配（编译风格：压缩）
     .on('error', function (err) {console.error('Error!', err.message); })// 显示错误信息
+    .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))// 主流浏览器的最新两个版本,是否美化属性值
     .pipe(gulp.dest( destPath.css )); // 输出路径
 });
 
 // 图片压缩
-gulp.task('bulidImg', function(){
-  return gulp.src(srcPath.images+'/**/*.{png,jpg,gif,svg}') // 指明源文件路径、并进行文件匹配
-    .pipe(changed( destPath.img ))
-    //.pipe(imagemin())
-    .pipe(gulp.dest( destPath.img )); // 输出路径
+// gulp.task('bulidImg', function(){
+//   return gulp.src(srcPath.images+'test/**/*.{png,jpg,gif}') // 指明源文件路径、并进行文件匹配
+//     .pipe(tinypng({
+//             key: 'LPQyZZVeZsN3WIOVu8cXyUbD7sAh0T1w',
+//             sigFile: 'test/.tinypng-sigs',
+//             log: true
+//         }))
+//     //139邮箱的tingpng api:LPQyZZVeZsN3WIOVu8cXyUbD7sAh0T1w
+//     .pipe(gulp.dest( destPath.img )); // 输出路径
+// });
+gulp.task('imgmin', function() {
+  return gulp.src(srcPath.images+'/**/*.{png,jpg,gif}')
+    .pipe(imagemin({
+      optimizationLevel: 3, //类型：Number  默认：3  取值范围：0-7（优化等级）
+      progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
+      interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
+      multipass: true, //类型：Boolean 默认：false 多次优化svg直到完全优化
+}))
+    .pipe(gulp.dest(destPath.img));
 });
 
 
 // 打包发布
 gulp.task('bulid', ['clean'], function(){ // 开始任务前会先执行[clean]任务
-  return gulp.start('html','bulidCss','js','bulidImg'); // 等[clean]任务执行完毕后再执行其他任务
+  return gulp.start('html','bulidCss','js','imgmin'); // 等[clean]任务执行完毕后再执行其他任务
 });
 
 

@@ -1,6 +1,9 @@
 @charset "utf-8";
 
-@import 'baseui';
+@import '../component/baseui';
+
+/**********首页**********/
+
 .banner{ height: 400px; background: url('../img/banner01.png') center; }
 
 .advantage{ overflow: hidden; margin: 70px auto;

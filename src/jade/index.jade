@@ -7,32 +7,7 @@ html
 		link(href="css/index.css",rel="stylesheet")
 	
 	body
-		div.header
-			div.inside
-				h1.logo 云信创富
-				ul.nav
-					li
-						a.hover(href="index.html") 首页
-					li
-						a(href="javascript:;")企业聚焦
-						p.subnav
-							span.shape
-								i.line
-								i.line.l2
-								i.line.l3
-								i.line.l4
-								i.line.l5
-								i.line.l6
-							img(src="img/common/subnav01.png")
-							a(href="trade-news.html") 行业动态
-							a(href="company-news.html") 企业动态
-							a(href="media-report.html") 媒体报道
-					li
-						a(href="#") 小微普惠
-					li
-						a(href="#") 金融科技
-					li
-						a(href="#") 关于我们
+		include ../component/header
 
 		div.banner
 
@@ -54,7 +29,7 @@ html
 				p.first
 					a(href="#")
 						img(src="img/img01.png")
-					a(href="#") 目前，校园贷“正规军”渐成规模，区别于此前部分“校园贷”违规开展变相高利贷，银行系校园贷产品都打出了“低息”牌。不过，低利率…
+						|目前，校园贷“正规军”渐成规模，区别于此前部分“校园贷”违规开展变相高利贷，银行系校园贷产品都打出了“低息”牌。不过，低利率…
 					span.date 2017-6-15
 						a.more(href="#") 查看全文 &gt;&gt;
 				p.list 
@@ -70,7 +45,7 @@ html
 				p.first
 					a(href="#")
 						img(src="img/img02.png")
-					a(href="#") 目前，校园贷“正规军”渐成规模，区别于此前部分“校园贷”违规开展变相高利贷，银行系校园贷产品都打出了“低息”牌。不过，低利率…
+						|目前，校园贷“正规军”渐成规模，区别于此前部分“校园贷”违规开展变相高利贷，银行系校园贷产品都打出了“低息”牌。不过，低利率…
 					span.date 2017-6-15
 						a.more(href="#") 查看全文 &gt;&gt;
 				p.list 
@@ -80,8 +55,7 @@ html
 					a(href="#") 银行用低利率杀入校园贷 不良率上3%就得亏钱
 						span.date 2017-6-15
 				
-		div.footer
-			p @2014-2017 米缸金融 沪ICP备15002888号 北京云信创富资本管理有限公司
+		include ../component/footer
 
 		script(src="js/jquery-1.7.2.min.js")
 		script(src="js/index.js")
