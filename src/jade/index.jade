@@ -9,7 +9,15 @@ html
 	body
 		include ../component/header
 
-		div.banner
+		.banner
+			ul.piclist
+				li.item.pic01.curr
+				li.item.pic02
+				li.item.pic03
+			.control
+				a.hover(href="javascript:;")
+				a(href="javascript:;")
+				a(href="javascript:;")
 
 		ul.advantage.inside
 			li.item.icon1
@@ -28,7 +36,7 @@ html
 					a.more(href="#") 更多 &gt;&gt;
 				p.first
 					a(href="#")
-						img(src="img/img01.png")
+						img(src="img/index/img01.png")
 						|目前，校园贷“正规军”渐成规模，区别于此前部分“校园贷”违规开展变相高利贷，银行系校园贷产品都打出了“低息”牌。不过，低利率…
 					span.date 2017-6-15
 						a.more(href="#") 查看全文 &gt;&gt;
@@ -44,7 +52,7 @@ html
 					a.more(href="#") 更多 &gt;&gt;
 				p.first
 					a(href="#")
-						img(src="img/img02.png")
+						img(src="img/index/img02.png")
 						|目前，校园贷“正规军”渐成规模，区别于此前部分“校园贷”违规开展变相高利贷，银行系校园贷产品都打出了“低息”牌。不过，低利率…
 					span.date 2017-6-15
 						a.more(href="#") 查看全文 &gt;&gt;

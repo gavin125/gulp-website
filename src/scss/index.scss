@@ -4,13 +4,23 @@
 
 /**********首页**********/
 
-.banner{ height: 400px; background: url('../img/banner01.png') center; }
+.banner{ height: 400px; position: relative; background: #eee;
+	.piclist .item{ position:absolute; top:0; left:0; width:100%; height: 400px; opacity:0; }
+	.pic01{ background: url("../img/index/banner01.png") no-repeat center; }
+	.pic02{ background: url("../img/index/banner02.png") no-repeat center; }
+	.pic03{ background: url("../img/index/banner03.png") no-repeat center; }
+	.piclist .curr{ opacity:1; } 
+	.control{ position: absolute; bottom:20px; left: 50%; width:200px; margin-left:-100px; height: 10px; line-height: 10px; text-align: center; z-index: 99; }
+	.control a{ display: inline-block; width: 10px; height:10px; border-radius: 10px; background: $c-lightblack; margin: 0 10px; transform:scale(0.8,0.8); }
+	.control a.hover,.control a:hover{ background: $c-orange; transform:scale(1,1);  }
+}
+
 
 .advantage{ overflow: hidden; margin: 70px auto;
 	.item{ width: 320px; text-align: center; float: left; color: $c-lightblack; padding-top: 55px;}
-	.icon1{ background: url('../img/icon1.png') 50% 2px no-repeat;}
-	.icon2{ background: url('../img/icon2.png') 50% 0 no-repeat;}
-	.icon3{ background: url('../img/icon3.png') 50% 5px no-repeat;}
+	.icon1{ background: url('../img/index/icon1.png') 50% 2px no-repeat;}
+	.icon2{ background: url('../img/index/icon2.png') 50% 0 no-repeat;}
+	.icon3{ background: url('../img/index/icon3.png') 50% 5px no-repeat;}
 	.title{ font-size: $fs-title; color:$c-drakblack; font-weight: normal; }
 }
 

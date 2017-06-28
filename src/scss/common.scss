@@ -26,7 +26,7 @@ article, aside, dialog, figure, footer, header, hgroup, nav, section {
 /* 设置默认字体 */
 body,
 button, input, select, textarea /* for ie */ {
-    font:14px/1.5 arial, "Microsoft Yahei", sans-serif;
+    font:12px/1.5 arial, "Microsoft Yahei", sans-serif;
 }
 h1, h2, h3, h4, h5, h6 { font-size:100%; }
 address, cite, dfn, em, var { font-style:normal; } /* 将斜体扶正 */
@@ -73,7 +73,7 @@ a:hover{ color:$c-orange;}
 	.subnav{ position: absolute; display: none; top:40px; left: -20px; background: $c-white; height:85px; border: solid 1px $bc-lightgray; width:265px; padding:15px 20px; z-index: 999; }
 	.nav li:hover .subnav{ display: block;}
 	.subnav img{ display: block; float: right; padding-left: 20px; border-left: solid 1px $bc-lightgray;  }
-	.subnav a{ display: block; float: left; line-height: 23px; font-size: $fs-default; margin-bottom: 5px; width:94px; }
+	.subnav a{ display: block; float: left; line-height: 23px; font-size: $fs-small; margin-bottom: 5px; width:94px; }
 	.subnav a.hover,.subnav a:hover{ background: $c-orange; color: $c-white; border-radius: 5px; }
 	//子菜单的小三角
 	.shape{ position: absolute; top:-6px; left: 45px; display: block; }

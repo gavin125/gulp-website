@@ -6,7 +6,7 @@ var gulp = require('gulp'), //引用项目gulp
     autoprefixer = require('gulp-autoprefixer'), //补全浏览器前缀
     uglify = require('gulp-uglify'),//压缩js
     imagemin = require('gulp-imagemin'),//压缩图片
-    pngquant = require('imagemin-pngquant'),//压缩图片
+    pngquant = require('imagemin-pngquant'),//imagemin的插件，png深度压缩
     tinypng  = require('gulp-tinypng-compress'), //TingPNG图片压缩api
     changed = require('gulp-changed'), // 只操作有过修改的文件
     rimraf = require('gulp-rimraf'), //清空文件夹
@@ -59,7 +59,7 @@ gulp.task('css', function () {
 gulp.task('js', function() {
     return gulp.src(srcPath.script+'/**/*.js') // 指明源文件路径、并进行文件匹配
         .pipe(changed( destPath.js ))
-        .pipe(uglify()) // 使用uglify进行压缩，并保留部分注释
+        //.pipe(uglify()) // 使用uglify进行压缩，并保留部分注释
         .pipe(gulp.dest( destPath.js )); // 输出路径
 });
 
@@ -134,10 +134,16 @@ gulp.task('imgmin', function() {
     .pipe(gulp.dest(destPath.img));
 });
 
+//JS处理
+gulp.task('bulidJs', function() {
+    return gulp.src(srcPath.script+'/**/*.js') // 指明源文件路径、并进行文件匹配
+        .pipe(uglify()) // 使用uglify进行压缩，并保留部分注释
+        .pipe(gulp.dest( destPath.js )); // 输出路径
+});
 
 // 打包发布
 gulp.task('bulid', ['clean'], function(){ // 开始任务前会先执行[clean]任务
-  return gulp.start('html','bulidCss','js','imgmin'); // 等[clean]任务执行完毕后再执行其他任务
+  return gulp.start('html','bulidCss','bulidJs','imgmin'); // 等[clean]任务执行完毕后再执行其他任务
 });
 
 

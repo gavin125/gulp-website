@@ -1,0 +1,44 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title 小微普惠-实践小微普惠
+		link(href="css/common.css",rel="stylesheet")
+		link(href="css/detail.css",rel="stylesheet")
+	
+	body
+		include ../component/header
+		
+		div.inside.main
+			div.menu
+				a(href="fintech.html") 金融科技
+				a(href="output.html") 整合输出
+				a.curr(href="application.html") 场景应用
+			div.content.fintech
+				h4.location &gt;&gt;场景应用
+				ul.newlist.list
+					li.item
+						img(src="img/fintech/img01.png")
+						h5.title 远程面签
+						p 云信创富首次将远程视频应用到房产抵押业务中的面签环节。借款用户凭借一部可远程视频的手机或电脑，就可以与云信创富风控人员远程视频连线，实现一对一的远程面签。同时，面签双方视频档案自动上传至云端，并于该借款项目后台档案管理相匹配，极大地提升了借款业务的审批效率。
+					li.item
+						img(src="img/fintech/img02.png")
+						h5.title 实时验房
+						p 云信创富风控人员对借款人抵押房产上门验房，并进行全方位拍照，手机App上传房屋信息及照片。通过该手段可实现抵押房产的快速评估与查验，在提升审批效率的同时，确保了抵押物的真实性。
+					li.item
+						img(src="img/fintech/img03.png")
+						h5.title 智能风控
+						p 云信创富在风控模型中引入大数据风控和AI人工智能决策引擎。通过对系统接入的大数据进行多维度、大量数据的智能处理，批量标准化的执行流程，实现风险管控前置及贷后预警。通过AI人工智能，对过往借款人及抵押物信息进行智能分类评级，针对不同类型的借款人采用差异化的审批流程，通过智能算法建立快速决策机制，极大地提高审批流程。通过机器学习降低80%的人工审批工作量，人工审批的差错率降低95%以上。
+					li.item
+						img(src="img/fintech/img04.png")
+						h5.title 生物识别
+						p 云信创富将生物识别技术应用到反欺诈系统中，通过对借款人进行面部、指纹、笔迹的识别，来鉴定借款人身份的真实性，确保每一笔借款信息准确无误，有助于提升贷前风险把控及贷后风险管理。
+					li.item
+						img(src="img/fintech/img05.png")
+						h5.title 智能合约
+						p 云信创富将区块链技术中的智能合约应用到信息技术建设中。智能合约是一套以数字形式定义的承诺（promises），包括合约参与方可以在上面执行这些承诺的协议，是合约参与方同意的权利和义务。智能合约的应用，确保了在借贷过程中，双方权利与义务的的履行，具有一定的法律效力，且几乎不可被恶意篡改。
+
+
+		include ../component/footer
+
+		script(src="js/jquery-1.7.2.min.js")
