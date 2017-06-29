@@ -64,16 +64,16 @@ a:hover{ color:$c-orange;}
 
 //头部含导航
 .header{ height:40px; padding:18px 0; background: $c-white;
-	.logo{ width: 133px; height: 40px; background: url('../img/common/logo.png'); float:left; text-indent: -999em;}
+	.logo{ display:block; width: 133px; height: 40px; background: url('../img/common/logo.png'); float:left; text-indent: -999em;}
 	.nav{ height: 40px; line-height: 40px; float: right;}
 	.nav li{ float: left; margin-left: 50px; position: relative;}
 	.nav a{ display: inline-block; width:66px; text-align: center; font-size: $fs-nav; color:$c-black; }
 	.nav a.hover,.nav a:hover{ color:$c-orange;}
 	//子菜单
-	.subnav{ position: absolute; display: none; top:40px; left: -20px; background: $c-white; height:85px; border: solid 1px $bc-lightgray; width:265px; padding:15px 20px; z-index: 999; }
+	.subnav{ position: absolute; display: none; top:40px; left: -20px; background: $c-white; height:85px; border: solid 1px $bc-lightgray; width:230px; padding:20px 15px; z-index: 999; box-shadow: (0 1px 1px 1px #ddd) }
 	.nav li:hover .subnav{ display: block;}
-	.subnav img{ display: block; float: right; padding-left: 20px; border-left: solid 1px $bc-lightgray;  }
-	.subnav a{ display: block; float: left; line-height: 23px; font-size: $fs-small; margin-bottom: 5px; width:94px; }
+	.subnav img{ display: block; float: right; padding-left: 15px; border-left: solid 1px $bc-lightgray;  }
+	.subnav a{ display: block; float: left; line-height: 23px; font-size: $fs-small; margin-bottom: 5px; width:70px; }
 	.subnav a.hover,.subnav a:hover{ background: $c-orange; color: $c-white; border-radius: 5px; }
 	//子菜单的小三角
 	.shape{ position: absolute; top:-6px; left: 45px; display: block; }

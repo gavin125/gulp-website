@@ -16,13 +16,17 @@
 
 ### gulp命令列表
 >----------------- 开发环境 -----------------</br>
- gulp default   开发环境（默认任务）</br>
- gulp html    HTML处理</br>
+ gulp        默认执行webserver和watch，需提前执行gulp start</br>
+ gulp html   HTML处理</br>
  gulp css    样式处理&添加源文件路径</br>
- gulp js    JS文件压缩</br>
+ gulp js     JS文件打包</br>
  gulp img    图片压缩</br>
+ gulp img    图片压缩</br>
+ gulp start  打包生成开发环境文件</br>
  ---------------- 发布环境 -----------------</br>
  gulp clean   清理文件</br>
- gulp bulidCss   样式处理</br>
+ gulp cssmin  压缩css</br>
+ gulp jsmin   压缩js</br>
+ gulp imgmin  压缩图片</br>
  gulp bulid   打包发布</br>
  ---------------------------------------------</br>

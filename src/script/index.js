@@ -15,23 +15,4 @@
 	})
 	
 }(jQuery))
-
-//Gavin组件库
-/*(function(win){
-	function Gavin(){};
-
-	Gavin.prototype={
-		constructor:Gavin,
-
-		//banner图片轮播组件
-		carousel:function(ele){
-			console.log(ele)
-		}
-	}
-
-
-	win.$g=new Gavin();
-	
-}(typeof window !=="undefined" ? window : this ))//如果有window对象传window对象，否则传当前全局对象
-
-$g.carousel("abc"); */
+ 

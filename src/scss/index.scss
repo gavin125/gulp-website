@@ -4,15 +4,16 @@
 
 /**********首页**********/
 
-.banner{ height: 400px; position: relative; background: #eee;
-	.piclist .item{ position:absolute; top:0; left:0; width:100%; height: 400px; opacity:0; }
-	.pic01{ background: url("../img/index/banner01.png") no-repeat center; }
-	.pic02{ background: url("../img/index/banner02.png") no-repeat center; }
-	.pic03{ background: url("../img/index/banner03.png") no-repeat center; }
-	.piclist .curr{ opacity:1; } 
-	.control{ position: absolute; bottom:20px; left: 50%; width:200px; margin-left:-100px; height: 10px; line-height: 10px; text-align: center; z-index: 99; }
-	.control a{ display: inline-block; width: 10px; height:10px; border-radius: 10px; background: $c-lightblack; margin: 0 10px; transform:scale(0.8,0.8); }
-	.control a.hover,.control a:hover{ background: $c-orange; transform:scale(1,1);  }
+.banner{ height: 400px; position: relative; background: url("../img/index/loading.gif") center no-repeat #eee;
+	//如下注释代码已封装到组件中
+	// .piclist .item{ position:absolute; top:0; left:0; width:100%; height: 400px; opacity:0; transition:opacity 1s; }
+	// .pic01{ background: url("../img/index/banner01.png") no-repeat center; }
+	// .pic02{ background: url("../img/index/banner02.png") no-repeat center; }
+	// .pic03{ background: url("../img/index/banner03.png") no-repeat center; }
+	// .piclist .curr{ opacity:1; } 
+	// .control{ position: absolute; bottom:20px; left: 50%; width:200px; margin-left:-100px; height: 10px; line-height: 10px; text-align: center; z-index: 99; }
+	// .control a{ display: inline-block; width: 10px; height:10px; border-radius: 10px; background: $c-lightblack; margin: 0 10px; transform:scale(0.8,0.8); }
+	// .control a.hover,.control a:hover{ background: $c-orange; transform:scale(1,1);  }
 }
 
 
@@ -21,7 +22,7 @@
 	.icon1{ background: url('../img/index/icon1.png') 50% 2px no-repeat;}
 	.icon2{ background: url('../img/index/icon2.png') 50% 0 no-repeat;}
 	.icon3{ background: url('../img/index/icon3.png') 50% 5px no-repeat;}
-	.title{ font-size: $fs-title; color:$c-drakblack; font-weight: normal; }
+	.title{ font-size: $fs-title; color:$c-drakblack; font-weight: normal; margin: 5px 0; }
 }
 
 .content{ overflow: hidden; margin-bottom:70px;
@@ -29,12 +30,13 @@
 	.news.right{ margin-right: 0;}
 	.title{ border-left: solid 2px $c-orange; padding-left: 10px; font-weight: normal; margin-bottom: 15px;}
 	a{ color:$c-lightblack;}
+	strong{ display: block; margin-bottom:10px; color:$c-black;}
 	a:hover{ color: $c-orange;}
 	.more{ float: right; }
 	//首条带缩略图
-	p.first{ display: block; font-size: $fs-small; overflow: hidden; margin-bottom: 15px; color:$c-lightblack;
+	p.first{ display: block; font-size: $fs-small; overflow: hidden; margin-bottom: 15px; color:$c-lightblack; text-align: justify;
 		img{ float: left; display: inline-block; margin-right: 15px;}
-		span{ display: block; text-align: right; margin-top: 15px;}
+		span{ display: block; text-align: right; }
 		.more{ margin-left: 15px; color:$c-black; }
 		.more:hover{ color: $c-orange;}
 	}

@@ -10,13 +10,14 @@ body{ background: $bgc-lightgray;}
 .main{ background: $c-white; margin: 15px auto; position: relative;}
 .menu{ position: absolute; top:0; left: 0; width:180px; }
 .menu a{ display:block; border-bottom: solid 1px $bc-lightgray; border-right:solid 1px $bc-lightgray; border-left: solid 5px $bc-gray; line-height: 60px; text-align: center; cursor:pointer; color:$c-black; }
-.menu .curr,.menu a:hover{ border-right:solid 1px $c-white; border-left: solid 5px $c-orange; color: $c-orange; }
+.menu .curr{ border-right:solid 1px $c-white; border-left: solid 5px $c-orange; color: $c-orange; }
+.menu a:hover{ border-left: solid 5px $c-orange; color: $c-orange; }
 
 //内容显示部分
-.content{ margin-left: 179px; border-left: solid 1px $bc-lightgray; padding:30px; color:$c-lightblack;
-	.location{ margin-bottom: 20px; color:$c-black;}
+.content{ margin-left: 179px; border-left: solid 1px $bc-lightgray; padding:30px 50px; color:$c-lightblack;
+	.location{ margin-bottom: 20px; color:$c-drakblack;}
 	p{ margin: 15px 0 20px; font-size: $fs-small; line-height: 1.6em; text-align: justify;}
-	.imgbox,.center{ text-align: center; margin-bottom:30px;}
+	.imgbox,.center{ text-align: center; margin:30px 0 50px;}
 }
 
 //新闻列表
@@ -24,7 +25,7 @@ body{ background: $bgc-lightgray;}
 	.item{ overflow: hidden; margin-bottom: 15px;}
 	.item p{ text-align: justify; }
 	img{ float: left; display: block; margin-right: 15px; border:solid 1px $bc-lightgray;}
-	.title{ font-weight: normal; color: $c-drakblack;}
+	.title{ color: $c-black;}
 	.date,.newinfo{ color: $c-lightblack; font-size: $fs-small; line-height: 1.5em;}
 	.more{ float: right; font-size: $fs-small; margin-top: -10px; color: $c-black;}
 	.more:hover{ color: $c-orange;}
@@ -56,6 +57,7 @@ body{ background: $bgc-lightgray;}
 .fintech{
 	.trait{ overflow: hidden; padding: 20px; margin-right: -80px; }
 	.trait .item{ float: left; width:300px; margin-right:80px; text-align: center; margin-bottom: 20px; }
+	.trait .item h5{ color:$c-black;  }
 	.title{ color: $c-black; font-size: $fs-small;}
 	.list img{ border: none;}
 	.list p{ margin: 10px 0; }
@@ -63,11 +65,11 @@ body{ background: $bgc-lightgray;}
 
 
 //关于我们
-.about{ background: $c-white; margin: 15px auto;
-	.title{margin-bottom: 10px; color:$c-drakblack;}
+.about{ background: $c-white; margin: 15px auto; 
+	.title{margin-bottom: 10px; color:$c-black;}
 	.info{ padding: 50px;}
 	.info img.intro{ float: left; display: inline-block; margin-right: 30px; margin-bottom: 20px;}
-	.info p{ margin-bottom:20px; font-size: $fs-small; color:$c-black;}
+	.info p{ margin-bottom:20px; font-size: $fs-small; color:$c-lightblack;}
 	.info p.intro{ text-indent: 2em; }
 
 	.question{ background: url("../img/about/bg.png") no-repeat bottom right #FFFBF5; clear:both; padding: 20px;
@@ -76,14 +78,14 @@ body{ background: $bgc-lightgray;}
 	}
 	.trait{ overflow: hidden; padding: 50px 0; margin-right: -55px;
 		.item{ float: left; width:250px; margin-right:55px; text-align: center; margin-bottom: 20px; }
-		h5{ font-weight: normal; margin-bottom: 5px; }
+		h5{ margin-bottom: 5px; }
 		p{ text-align: justify; color:$c-lightblack;}
 	 }
 	 .area{background: url("../img/about/icon.png") no-repeat left center; padding-left:25px; line-height: 30px; margin-bottom: 10px;}
 	 .contact{ background: $bgc-lightgray; padding: 20px 20px 0; overflow: hidden;
 	 	.left{ float: left;}
 	 	.left p{ padding-left: 13px;}
-	 	h5{ margin-bottom: 10px; font-size: $fs-small; line-height: 14px;}
+	 	h5{ margin-bottom: 10px; font-size: $fs-small; line-height: 14px; color:$c-black;}
 	 	.title{ border-left: solid 3px $c-orange; padding-left: 10px; }
 		.right{ float: right; width: 350px;}
 	 }

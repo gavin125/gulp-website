@@ -47,7 +47,6 @@ gulp.task('html',function(){
 //CSS处理
 gulp.task('css', function () {
     return sass(srcPath.scss+'/**/*.scss',{sourcemap: true, style: 'compact'}) // 指明源文件路径、并进行文件匹配
-        //style编译风格：nested嵌套,compact紧凑,expanded展开,compressed
         //.pipe(changed( destPath.css ))
         .on('error', function (err) {console.error('Error!', err.message); })// 显示错误信息
         .pipe(sourcemaps.write())
@@ -59,7 +58,6 @@ gulp.task('css', function () {
 gulp.task('js', function() {
     return gulp.src(srcPath.script+'/**/*.js') // 指明源文件路径、并进行文件匹配
         .pipe(changed( destPath.js ))
-        //.pipe(uglify()) // 使用uglify进行压缩，并保留部分注释
         .pipe(gulp.dest( destPath.js )); // 输出路径
 });
 
@@ -105,8 +103,9 @@ gulp.task('clean', function() {
     .pipe(rimraf())//清空生产环境生产的文件夹
 });
 // 样式处理
-gulp.task('bulidCss', function () {
-  return sass( srcPath.scss+'/**/*.scss', { style: 'compressed' }) // 指明源文件路径、并进行文件匹配（编译风格：压缩）
+gulp.task('cssmin', function () {
+  return sass( srcPath.scss+'/**/*.scss', { style: 'compressed' }) // 指明源文件路径、并进行文件匹配
+  //style编译风格：nested嵌套,compact紧凑,expanded展开,compressed
     .on('error', function (err) {console.error('Error!', err.message); })// 显示错误信息
     .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))// 主流浏览器的最新两个版本,是否美化属性值
     .pipe(gulp.dest( destPath.css )); // 输出路径
@@ -120,7 +119,7 @@ gulp.task('bulidCss', function () {
 //             sigFile: 'test/.tinypng-sigs',
 //             log: true
 //         }))
-//     //139邮箱的tingpng api:LPQyZZVeZsN3WIOVu8cXyUbD7sAh0T1w
+//     //139 tingpng api:LPQyZZVeZsN3WIOVu8cXyUbD7sAh0T1w
 //     .pipe(gulp.dest( destPath.img )); // 输出路径
 // });
 gulp.task('imgmin', function() {
@@ -135,7 +134,7 @@ gulp.task('imgmin', function() {
 });
 
 //JS处理
-gulp.task('bulidJs', function() {
+gulp.task('jsmin', function() {
     return gulp.src(srcPath.script+'/**/*.js') // 指明源文件路径、并进行文件匹配
         .pipe(uglify()) // 使用uglify进行压缩，并保留部分注释
         .pipe(gulp.dest( destPath.js )); // 输出路径
@@ -143,7 +142,7 @@ gulp.task('bulidJs', function() {
 
 // 打包发布
 gulp.task('bulid', ['clean'], function(){ // 开始任务前会先执行[clean]任务
-  return gulp.start('html','bulidCss','bulidJs','imgmin'); // 等[clean]任务执行完毕后再执行其他任务
+  return gulp.start('html','cssmin','jsmin','imgmin'); // 等[clean]任务执行完毕后再执行其他任务
 });
 
 
@@ -151,14 +150,18 @@ gulp.task('bulid', ['clean'], function(){ // 开始任务前会先执行[clean]�
 -------------------------------------------------------------- */
   gulp.task('help',function () {
     console.log('----------------- 开发环境 -----------------');
-    console.log('gulp default   开发环境（默认任务）');
-    console.log('gulp html    HTML处理');
+    console.log('gulp        默认执行webserver和watch，需提前执行gulp start');
+    console.log('gulp html   HTML处理');
     console.log('gulp css    样式处理&添加源文件路径');
-    console.log('gulp js    JS文件压缩');
+    console.log('gulp js     JS文件打包');
     console.log('gulp img    图片压缩');
+    console.log('gulp img    图片压缩');
+    console.log('gulp start  打包生成开发环境文件');
     console.log('---------------- 发布环境 -----------------');
     console.log('gulp clean   清理文件');
-    console.log('gulp bulidCss   样式处理');
+    console.log('gulp cssmin  压缩css');
+    console.log('gulp jsmin   压缩js');
+    console.log('gulp imgmin  压缩图片');
     console.log('gulp bulid   打包发布');
     console.log('---------------------------------------------');
   });
