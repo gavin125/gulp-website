@@ -1,31 +1,26 @@
+include ../component/header
+
 doctype html
 html
-	head
-		meta(charset="utf-8")
-		title 小微普惠-实践小微普惠
-		link(href="css/common.css",rel="stylesheet")
-		link(href="css/detail.css",rel="stylesheet")
-		link(href="favicon.ico",rel="shortcut icon")
-	body
-		include ../component/header
+	+header('整合输出-金融科技-云信创富官网',['css/common.css','css/detail.css'])
 		
-		div.inside.main
-			div.menu
-				a(href="fintech.html") 金融科技
-				a.curr(href="output.html") 整合输出
-				a(href="application.html") 场景应用
-			div.content.fintech
-				h4.location &gt;&gt;整合输出
-				h5.title 技术整合
-				p 云信创富接入中国互联网金融协会信用信息共享系统、中国支付清算协会互联网金融风险信息共享系统，以及专业机构价值评估系统。综合各方大数据，通过智能算法建立快速决策机制，实现风险管控前置及贷后预警。
-				p.imgbox
-					img(src="img/fintech/output01.png", alt="")
-				h5.title 技术输出
-				p 云信创富拥有一整套的结构化用户运营解决方案、智能化业务运营解决方案和云端化平台运营解决方案，有效帮助合作伙伴解决获客、运营及风险控制等问题。
-				p.imgbox
-					img(src="img/fintech/output02.png", alt="")
+	div.inside.main
+		div.menu
+			a(href="fintech.html") 金融科技
+			a.curr(href="output.html") 整合输出
+			a(href="application.html") 场景应用
+		div.content.fintech
+			h4.location &gt;&gt;整合输出
+			h5.title 技术整合
+			p 云信创富接入中国互联网金融协会信用信息共享系统、中国支付清算协会互联网金融风险信息共享系统，以及专业机构价值评估系统。综合各方大数据，通过智能算法建立快速决策机制，实现风险管控前置及贷后预警。
+			p.imgbox
+				img(src="img/fintech/output01.png", alt="")
+			h5.title 技术输出
+			p 云信创富拥有一整套的结构化用户运营解决方案、智能化业务运营解决方案和云端化平台运营解决方案，有效帮助合作伙伴解决获客、运营及风险控制等问题。
+			p.imgbox
+				img(src="img/fintech/output02.png", alt="")
 
 
-		include ../component/footer
+	include ../component/footer
 
-		script(src="js/jquery-1.7.2.min.js")
+

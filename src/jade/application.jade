@@ -1,15 +1,10 @@
+include ../component/header
+
 doctype html
 html
-	head
-		meta(charset="utf-8")
-		title 小微普惠-实践小微普惠
-		link(href="css/common.css",rel="stylesheet")
-		link(href="css/detail.css",rel="stylesheet")
-		link(href="favicon.ico",rel="shortcut icon")
-	body
-		include ../component/header
+	+header('场景应用-金融科技-云信创富官网',['css/common.css','css/detail.css'])
 		
-		div.inside.main
+	div.inside.main
 			div.menu
 				a(href="fintech.html") 金融科技
 				a(href="output.html") 整合输出
@@ -39,6 +34,6 @@ html
 						p 云信创富将区块链技术中的智能合约应用到信息技术建设中。智能合约是一套以数字形式定义的承诺（promises），包括合约参与方可以在上面执行这些承诺的协议，是合约参与方同意的权利和义务。智能合约的应用，确保了在借贷过程中，双方权利与义务的的履行，具有一定的法律效力，且几乎不可被恶意篡改。
 
 
-		include ../component/footer
+	include ../component/footer
 
-		script(src="js/jquery-1.7.2.min.js")
+

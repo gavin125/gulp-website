@@ -6,3 +6,6 @@ dist/
 
 # sass 缓存文件夹
 .sass-cache/
+
+# rar 压缩文件夹
+rar/

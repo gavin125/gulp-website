@@ -2,7 +2,7 @@
 	var doc=win.document;
 	function YX(){
 		this.version='1.0.0';
-		this.create='2017-06-29';
+		this.create='2017-06-28';
 		this.author='gavin';
 	};
 
@@ -49,7 +49,7 @@
 	        		curr=n;
 	        		for(var j=0;j<dotlen;j++){dotli[j].className="";imgli[j].style.opacity=0;}
 	        		dotli[n].className="hover";
-	        		imgli[n].style.opacity=1;console.log(n)
+	        		imgli[n].style.opacity=1;
 	        		if(auto){timer=setTimeout(function(){changepic(n,true)},speed); }
 	        	}
 	        	for(var i = 0; i < dotlen; i++){
@@ -62,7 +62,7 @@
 			})
 
         	//增加样式
-        	that.addNewStyle('carouselBannerCss','.banner .piclist .item { position: absolute; top: 0; left: 0; width: 100%; height: 400px; opacity: 0; background-repeat:no-repeat; backgtound-position:center; -webkit-transition: opacity .5s; transition: opacity .5s; }.banner .piclist .curr { opacity: 1; }.banner .control { position: absolute; bottom: 20px; left: 50%; width: 200px; margin-left: -100px; height: 10px; line-height: 10px; text-align: center; z-index: 99; }.banner .control a { display: inline-block; width: 10px; height: 10px; border-radius: 10px; background: #999; margin: 0 10px; -webkit-transform: scale(0.8, 0.8); transform: scale(0.8, 0.8); }.banner .control a.hover, .banner .control a:hover { background: #f90; -webkit-transform: scale(1, 1); transform: scale(1, 1); }');
+        	that.addNewStyle('carouselBannerCss','.banner .piclist .item { position: absolute; top: 0; left: 0; width: 100%; height: 400px; opacity: 0; background-repeat:no-repeat; background-position:center; -webkit-transition: opacity .5s; transition: opacity .5s; }.banner .piclist .curr { opacity: 1; }.banner .control { position: absolute; bottom: 20px; left: 50%; width: 200px; margin-left: -100px; height: 10px; line-height: 10px; text-align: center; z-index: 99; }.banner .control a { display: inline-block; width: 10px; height: 10px; border-radius: 10px; background: #999; margin: 0 10px; -webkit-transform: scale(0.8, 0.8); transform: scale(0.8, 0.8); }.banner .control a.hover, .banner .control a:hover { background: #f90; -webkit-transform: scale(1, 1); transform: scale(1, 1); }');
         	
         	
 		},

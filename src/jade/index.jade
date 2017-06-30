@@ -1,64 +1,60 @@
+include ../component/header
+
 doctype html
 html
-	head
-		meta(charset="utf-8")
-		title 云信创富-首页
-		link(href="css/common.css",rel="stylesheet")
-		link(href="css/index.css",rel="stylesheet")
-		link(href="favicon.ico",rel="shortcut icon") 
-	body
-		include ../component/header 
+	+header('云信创富官网-首页',['css/common.css','css/index.css']) 
 
-		.banner#carouselBanner			
+	.banner#carouselBanner			
 
-		ul.advantage.inside
-			li.item.icon1
-				h4.title 管理资产逾100亿
-				p 成立两年，业务覆盖22大城市
-			li.item.icon2
-				h4.title 创新金融科技
-				p 科技与金融结合，提升效率
-			li.item.icon3
-				h4.title 实践普惠金融
-				p 立足消费金融，服务小微及个人
+	ul.advantage.inside
+		li.item.icon1
+			h4.title 管理资产逾100亿
+			p 成立两年，业务覆盖22大城市
+		li.item.icon2
+			h4.title 创新金融科技
+			p 科技与金融结合，提升效率
+		li.item.icon3
+			h4.title 实践普惠金融
+			p 立足消费金融，服务小微及个人
 
-		div.content.inside
-			div.news
-				h3.title 行业动态
-					a.more(href="trade-news.html") 更多 &gt;&gt;
-				p.first
-					a(href="news-detail01.html")
-						img(src="img/index/img01.png")
-						strong 金融科技催生金融业态变革
-						|南方日报讯 （记者/陈若然）随着金融科技兴起，金融行业正发生着深刻的变革…
-					span.date 2017-6-26
-						a.more(href="news-detail01.html") 查看全文 &gt;&gt;
-				p.list 
-					a(href="news-detail02.html") 如何引导金融科技探索普惠金融？
-						span.date 2017-6-7
-				p.list 
-					a(href="news-detail03.html") 2020年之前，普惠金融将有哪些利好？
-						span.date 2017-5-10
-	
-			div.news.right
-				h3.title 企业动态
-					a.more(href="trade-news.html") 更多 &gt;&gt;
-				p.first
-					a(href="news-detail04.html")
-						img(src="img/index/img02.png")
-						strong 中国社科院专家：风控对金融科技至关重要
-						|新华社北京6月25日电 中国社科院金融研究所所长助理杨涛25日在此间表示…
-					span.date 2017-6-26
-						a.more(href="news-detail04.html") 查看全文 &gt;&gt;
-				p.list 
-					a(href="news-detail05.html") 金融科技发展迅猛 或涌现新金融巨头
-						span.date 2017-6-27
-				p.list 
-					a(href="news-detail06.html") 央行解读金融科技委员会职能 为企业指明方向
-						span.date 2017-6-13
-				
-		include ../component/footer
 
-		script(src="js/YX-1.0.0.js")
-		script.
-			$YX.carouselBanner("carouselBanner",['img/index/banner01.png','img/index/banner02.png','img/index/banner03.png'],5000); 
+	div.content.inside
+		div.news
+			h3.title 行业动态
+				a.more(href="trade-news.html") 更多 &gt;&gt;
+			p.first
+				a(href="news-detail01.html")
+					img(src="img/index/img01.png")
+					strong 金融科技催生金融业态变革
+					|南方日报讯 （记者/陈若然）随着金融科技兴起，金融行业正发生着深刻的变革…
+				span.date 2017-6-26
+					a.more(href="news-detail01.html") 查看全文 &gt;&gt;
+			p.list 
+				a(href="news-detail02.html") 如何引导金融科技探索普惠金融？
+					span.date 2017-6-7
+			p.list 
+				a(href="news-detail03.html") 2020年之前，普惠金融将有哪些利好？
+					span.date 2017-5-10
+
+		div.news.right
+			h3.title 企业动态
+				a.more(href="trade-news.html") 更多 &gt;&gt;
+			p.first
+				a(href="news-detail04.html")
+					img(src="img/index/img02.png")
+					strong 中国社科院专家：风控对金融科技至关重要
+					|新华社北京6月25日电 中国社科院金融研究所所长助理杨涛25日在此间表示…
+				span.date 2017-6-26
+					a.more(href="news-detail04.html") 查看全文 &gt;&gt;
+			p.list 
+				a(href="news-detail05.html") 金融科技发展迅猛 或涌现新金融巨头
+					span.date 2017-6-27
+			p.list 
+				a(href="news-detail06.html") 央行解读金融科技委员会职能 为企业指明方向
+					span.date 2017-6-13
+			
+	include ../component/footer
+
+	script(src="js/YX-1.0.0.js")
+	script.
+		$YX.carouselBanner("carouselBanner",['img/index/banner01.png','img/index/banner02.png','img/index/banner03.png'],5000); 

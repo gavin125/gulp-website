@@ -1,71 +1,66 @@
+include ../component/header
+
 doctype html
 html
-	head
-		meta(charset="utf-8")
-		title 企业聚焦-行业新闻
-		link(href="css/common.css",rel="stylesheet")
-		link(href="css/detail.css",rel="stylesheet")
-		link(href="favicon.ico",rel="shortcut icon")
-	body
-		include ../component/header
+	+header('行业动态-企业聚焦-云信创富官网',['css/common.css','css/detail.css'])
 		
-		div.inside.main
-			div.menu
-				a.curr(href="trade-news.html") 行业动态
-				a(href="javascript:;") 企业动态
-				a(href="javascript:;") 媒体报道
-			div.content
-				h4.location &gt;&gt;行业动态
-				ul.newlist
-					li.item
-						img(src="img/news/new01.png")
-						h5.title 金融科技催生金融业态变革
-						span.date 2017-6-26
-						p.newinfo 南方日报讯 （记者/陈若然）随着金融科技兴起，金融行业正发生着深刻的变革。技术驱动金融业务、管理全面创新，倒逼传统金融机构转型，还推动着金融监管机制和方式的转变。在6月24日上午举办的2017年广州金融交易博览会上的金融科技论坛中，来自人民银行...
-						a.more(href="news-detail01.html") 查看全文 &gt;&gt;
-					li.item
-						img(src="img/news/new02.png")
-						h5.title 如何引导金融科技探索普惠金融？
-						span.date 2017-6-7
-						p.newinfo 每次中华文明的空前繁荣，几乎都能看到金融的影子。而这一次，全球将目光聚焦在正在中国快速发展的金融科技。地中海世界最早的货币是在公元前6世纪的某一时间出现在吕底亚的金银合金小块，而中国的第一枚青铜币则早于或晚于它一个世纪出现，现在尚无定论...
-						a.more(href="news-detail02.html") 查看全文 &gt;&gt;
-					li.item
-						img(src="img/news/new02.png")
-						h5.title 2020年之前，普惠金融将有哪些利好？
-						span.date 2017-5-10
-						p.newinfo 随着各大银行开启“普惠金融业务部”，人们的视线又从非法集资的硝烟中稍稍移开了，我国对于普惠金融发展的规划没有变，自2016年至2020年，重视发展普惠金融的方向没有变。普惠金融，机会平等。所谓“普惠金融”是指立足机会平等要求和商业可持续原则，以可负担...
-						a.more(href="news-detail03.html") 查看全文 &gt;&gt;
-					li.item
-						img(src="img/news/new03.png")
-						h5.title 中国社科院专家：风控对金融科技至关重要
-						span.date 2017-6-26
-						p.newinfo 新华社北京6月25日电 中国社科院金融研究所所长助理杨涛25日在此间表示，中国金融科技发展迅猛，但仍面临不少挑战，防控风险对金融科技至关重要。杨涛当天在金融科技发展大会举行间隙接受新华社记者采访时说，近几年，金融科技热潮在全球涌现。从全球看，中国...
-						a.more(href="news-detail04.html") 查看全文 &gt;&gt;
-					li.item
-						img(src="img/news/new04.png")
-						h5.title 金融科技发展迅猛 或涌现新金融巨头
-						span.date 2017-6-27
-						p.newinfo 据新华社电 中国社科院金融研究所所长助理杨涛前天表示，中国金融科技发展迅猛，可能会涌现出着眼于金融垂直生态或是覆盖金融全产业链的新金融巨头，但仍面临不少挑战，防控风险对金融科技至关重要。杨涛当天在金融科技发展大会举行间隙接受新华社记者采访时说...
-						a.more(href="news-detail05.html") 查看全文 &gt;&gt;
-					li.item
-						img(src="img/news/new05.png")
-						h5.title 央行解读金融科技委员会职能 为企业指明方向
-						span.date 2017-6-13
-						p.newinfo “没有良好的创新机制护航，金融科技(Fintech)发展就可能偏离正确的方向”，中国人民银行科技司司长李伟在日前介绍金融科技委员会时说到，委员会定位和职能侧重于加强金融科技工作的研究、规划与统筹协调。有业内人士指出，该委员会的成立，将为互联网金融行业...
-						a.more(href="news-detail06.html") 查看全文 &gt;&gt;
-				div.pagebox
-					a.p_num.curr(href="#") 1
-					a.p_num(href="#") 2
-					a.p_num(href="#") 3
-					a.p_num(href="#") 4
-					a.p_num(href="#") 5
-					span ··· 
-					a.p_num(href="#") 10
-					a(href="#") 下一页
-					input(type="text")
-					a(href="#") 转到
+	div.inside.main
+		div.menu
+			a.curr(href="trade-news.html") 行业动态
+			a(href="javascript:;") 企业动态
+			a(href="javascript:;") 媒体报道
+		div.content
+			h4.location &gt;&gt;行业动态
+			ul.newlist
+				li.item
+					img(src="img/news/new01.png")
+					h5.title 金融科技催生金融业态变革
+					span.date 2017-6-26
+					p.newinfo 南方日报讯 （记者/陈若然）随着金融科技兴起，金融行业正发生着深刻的变革。技术驱动金融业务、管理全面创新，倒逼传统金融机构转型，还推动着金融监管机制和方式的转变。在6月24日上午举办的2017年广州金融交易博览会上的金融科技论坛中，来自人民银行...
+					a.more(href="news-detail01.html") 查看全文 &gt;&gt;
+				li.item
+					img(src="img/news/new02.png")
+					h5.title 如何引导金融科技探索普惠金融？
+					span.date 2017-6-7
+					p.newinfo 每次中华文明的空前繁荣，几乎都能看到金融的影子。而这一次，全球将目光聚焦在正在中国快速发展的金融科技。地中海世界最早的货币是在公元前6世纪的某一时间出现在吕底亚的金银合金小块，而中国的第一枚青铜币则早于或晚于它一个世纪出现，现在尚无定论...
+					a.more(href="news-detail02.html") 查看全文 &gt;&gt;
+				li.item
+					img(src="img/news/new02.png")
+					h5.title 2020年之前，普惠金融将有哪些利好？
+					span.date 2017-5-10
+					p.newinfo 随着各大银行开启“普惠金融业务部”，人们的视线又从非法集资的硝烟中稍稍移开了，我国对于普惠金融发展的规划没有变，自2016年至2020年，重视发展普惠金融的方向没有变。普惠金融，机会平等。所谓“普惠金融”是指立足机会平等要求和商业可持续原则，以可负担...
+					a.more(href="news-detail03.html") 查看全文 &gt;&gt;
+				li.item
+					img(src="img/news/new03.png")
+					h5.title 中国社科院专家：风控对金融科技至关重要
+					span.date 2017-6-26
+					p.newinfo 新华社北京6月25日电 中国社科院金融研究所所长助理杨涛25日在此间表示，中国金融科技发展迅猛，但仍面临不少挑战，防控风险对金融科技至关重要。杨涛当天在金融科技发展大会举行间隙接受新华社记者采访时说，近几年，金融科技热潮在全球涌现。从全球看，中国...
+					a.more(href="news-detail04.html") 查看全文 &gt;&gt;
+				li.item
+					img(src="img/news/new04.png")
+					h5.title 金融科技发展迅猛 或涌现新金融巨头
+					span.date 2017-6-27
+					p.newinfo 据新华社电 中国社科院金融研究所所长助理杨涛前天表示，中国金融科技发展迅猛，可能会涌现出着眼于金融垂直生态或是覆盖金融全产业链的新金融巨头，但仍面临不少挑战，防控风险对金融科技至关重要。杨涛当天在金融科技发展大会举行间隙接受新华社记者采访时说...
+					a.more(href="news-detail05.html") 查看全文 &gt;&gt;
+				li.item
+					img(src="img/news/new05.png")
+					h5.title 央行解读金融科技委员会职能 为企业指明方向
+					span.date 2017-6-13
+					p.newinfo “没有良好的创新机制护航，金融科技(Fintech)发展就可能偏离正确的方向”，中国人民银行科技司司长李伟在日前介绍金融科技委员会时说到，委员会定位和职能侧重于加强金融科技工作的研究、规划与统筹协调。有业内人士指出，该委员会的成立，将为互联网金融行业...
+					a.more(href="news-detail06.html") 查看全文 &gt;&gt;
+			div.pagebox
+				a.p_num.curr(href="#") 1
+				a.p_num(href="#") 2
+				a.p_num(href="#") 3
+				a.p_num(href="#") 4
+				a.p_num(href="#") 5
+				span ··· 
+				a.p_num(href="#") 10
+				a(href="#") 下一页
+				input(type="text")
+				a(href="#") 转到
 
 
-		include ../component/footer
+	include ../component/footer
 
-		script(src="js/jquery-1.7.2.min.js")
+

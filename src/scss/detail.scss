@@ -55,7 +55,7 @@ body{ background: $bgc-lightgray;}
 
 //金融科技
 .fintech{
-	.trait{ overflow: hidden; padding: 20px; margin-right: -80px; }
+	.trait{ overflow: hidden; padding: 20px 0; margin-right: -80px; }
 	.trait .item{ float: left; width:300px; margin-right:80px; text-align: center; margin-bottom: 20px; }
 	.trait .item h5{ color:$c-black;  }
 	.title{ color: $c-black; font-size: $fs-small;}
@@ -87,7 +87,7 @@ body{ background: $bgc-lightgray;}
 	 	.left p{ padding-left: 13px;}
 	 	h5{ margin-bottom: 10px; font-size: $fs-small; line-height: 14px; color:$c-black;}
 	 	.title{ border-left: solid 3px $c-orange; padding-left: 10px; }
-		.right{ float: right; width: 350px;}
+		.right{ float: right; width: 365px;}
 	 }
 
 

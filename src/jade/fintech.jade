@@ -1,15 +1,10 @@
+include ../component/header
+
 doctype html
 html
-	head
-		meta(charset="utf-8")
-		title 小微普惠-实践小微普惠
-		link(href="css/common.css",rel="stylesheet")
-		link(href="css/detail.css",rel="stylesheet")
-	
-	body
-		include ../component/header
+	+header('金融科技-金融科技-云信创富官网',['css/common.css','css/detail.css'])
 		
-		div.inside.main
+	div.inside.main
 			div.menu
 				a.curr(href="fintech.html") 金融科技
 				a(href="output.html") 整合输出
@@ -41,6 +36,6 @@ html
 				
 
 
-		include ../component/footer
+	include ../component/footer
 
-		script(src="js/jquery-1.7.2.min.js")
+
