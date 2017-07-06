@@ -9,7 +9,7 @@ mixin shape
 		i.line.l6
 
 //- head公用部分
-mixin header(title,cssarr,navarr)
+mixin header(title,cssarr,navcfg)
 	head
 		meta(charset="utf-8")
 		title #{title} 
@@ -25,30 +25,31 @@ mixin header(title,cssarr,navarr)
 					a.logo(href="index.html") 云信创富
 				ul.nav
 					li
-						a.hover(href="index.html") 首页
+						a(href="index.html" class="#{navcfg.a[0]}") 首页
+
 					li
-						a(href="javascript:;") 普惠金融
+						a(href="javascript:;" class="#{navcfg.b[0]}") 普惠金融
 						p.subnav
 							+shape
 							img(src="img/common/subnav02.png")
-							a(href="xwph-intro.html") 小微普惠
-							a(href="xwph-exam.html") 优秀案例
+							a(href="xwph-intro.html" class="#{navcfg.b[1]}") 小微普惠
+							a(href="xwph-exam.html" class="#{navcfg.b[2]}") 优秀案例
 					li
-						a(href="javascript:;") 金融科技
+						a(href="javascript:;" class="#{navcfg.c[0]}") 金融科技
 						p.subnav
 							+shape
 							img(src="img/common/subnav03.png")
-							a(href="fintech.html") 金融科技
-							a(href="output.html") 整合输出
-							a(href="application.html") 场景应用
+							a(href="fintech.html" class="#{navcfg.c[1]}") 金融科技
+							a(href="output.html" class="#{navcfg.c[2]}") 整合输出
+							a(href="application.html" class="#{navcfg.c[3]}") 场景应用
 
 					li
-						a(href="javascript:;") 企业聚焦
+						a(href="javascript:;" class="#{navcfg.d[0]}") 企业聚焦
 						p.subnav
 							+shape
 							img(src="img/common/subnav01.png")
-							a(href="trade-news.html") 行业动态
-							a(href="trade-news.html") 企业动态
-							a(href="trade-news.html") 媒体报道
+							a(href="trade-news.html" class="#{navcfg.d[1]}") 行业动态
+							a(href="trade-news.html" class="#{navcfg.d[2]}") 企业动态
+							a(href="trade-news.html" class="#{navcfg.d[3]}") 媒体报道
 					li
-						a(href="about.html") 关于我们
+						a(href="about.html" class="#{navcfg.e[0]}") 关于我们
